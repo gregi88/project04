@@ -101,7 +101,7 @@ form textarea {
 form button[type='submit'] {
     padding: 0 30px;
     height: 40px;
-    float: right;
+    float: left;
     border: none;
     background: #00C2F1;
 
