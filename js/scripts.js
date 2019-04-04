@@ -47,12 +47,14 @@ function displayErrors(errors) {
 
 }
 
+// anonymous function which prevent default action
 form.addEventListener("submit", function(e) {
 
     e.preventDefault();
 
     var errors = [];
 
+// each form field with data error
     for(var i = 0; i < fields.length; i++) {
 
         var field = fields[i],
@@ -65,11 +67,13 @@ form.addEventListener("submit", function(e) {
         } else if(field.type === "select-one") {
             isValid = isNotEmpty(field);
         } else if(field.type === "textarea") {
-            isValid = isAtLeast(field, 2);
+            isValid = isAtLeast(field, 20);
         }
 
         if(!isValid) {
             field.classList.add("error");
+            // field dataset error return data-error value!
+
             errors.push(field.dataset.error);
         } else {
             field.classList.remove("error");

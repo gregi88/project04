@@ -12,17 +12,20 @@
         <h1>Form validation</h1>
 
         <form action="#" id="myForm">
-            <input type="text" name="your-name" placeholder="First name and last name" data-error="please write first name and last name" >
-            <input type="email" name="your-email" placeholder="Adress e-mail" data-error="please write correct e-mail" >
-            <select name="your-subject" data-error="message subject">
-                <option value="" disabled selected>- Temat wiadomości -</option>
-                <option value="question">Pytanie</option>
-                <option value="proposition">Propozycja</option>
-                <option value="support">Support</option>
-            </select>
-            <textarea name="your-message" placeholder="Your message" data-error="Your message" ></textarea>
+            <input  type="text" name="your-name" placeholder="First name" data-error="* Please write your first name" >
+            <input type="text" name="your-name" placeholder="Last name" data-error="* Please write your last name" >
 
-            <button type="submit">Wyślij</button>
+            <select name="your-subject" data-error="* Please select message subject">
+                <option value="" disabled selected>- Message subject  -</option>
+                <option value="question">Question</option>
+                <option value="proposition">Proposition</option>
+                <option value="support">Support</option>
+            <input  type="email" name="your-email" placeholder="e-mail" data-error="* Please write correct e-mail" >
+
+            </select>
+            <textarea name="your-message" placeholder="Your message"  data-error="* Your message need to have min. 20 characters" ></textarea>
+
+            <button type="submit"> SEND </button>
         </form>
 
     </div>
